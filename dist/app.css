@@ -9,7 +9,6 @@
   width: 70%;
   height: 100%;
   margin: 0 auto;
-  padding: 100px 0;
 }
 
 body {
@@ -44,11 +43,10 @@ body main .main_container .cds_cont {
 body main .main_container .cds_cont .album_img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 20px;
 }
 body main .main_container .cds_cont h3 {
   color: #ffffff;
-  margin-bottom: 20px;
+  margin: 20px 0;
   text-transform: uppercase;
 }
 body main .main_container .cds_cont p {

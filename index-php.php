@@ -1,3 +1,5 @@
+<?php include "db.php" ?>
+
 <!DOCTYPE html>
   <html lang="en" dir="ltr">
     <head>
@@ -16,21 +18,15 @@
 
       <main>
         <div class="container main_container">
-
+          <?php foreach ($database as $array): ?>
+            <div class="cds_cont">
+              <img class="album_img" src="<?php echo $array["poster"]; ?>" alt="">
+              <h3 class="album_name"><?php echo $array["title"]; ?></h3>
+              <p class="album_author"><?php echo $array["author"]; ?></p>
+              <p class="album_year"><?php echo $array["year"]; ?></p>
+            </div>
+          <?php endforeach; ?>
         </div>
       </main>
-
-      <!-- template -->
-      <script id="music_template" type="text/x-handlebars-template">
-        <div class="cds_cont">
-          <img class="album_img" src="{{{poster}}}" alt="">
-          <h3 class="album_name">{{title}}</h3>
-          <p class="album_author">{{author}}</p>
-          <p class="album_year">{{year}}</p>
-        </div>
-      </script>
-      <!-- /template -->
-
-      <script src="dist/app.js" charset="utf-8"></script>
     </body>
   </html>
